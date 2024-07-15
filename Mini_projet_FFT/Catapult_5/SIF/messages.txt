@@ -1,0 +1,22 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+flow package require /SCVerify
+10.4
+solution file add [file join $sfd fft_types.h] -type C++ 
+/INPUTFILES/1
+solution file add [file join $sfd fft.cpp] -type C++ 
+/INPUTFILES/2
+solution file add [file join $sfd fft.h] -type C++ 
+/INPUTFILES/3
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Creating project directory '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/'. (PRJ-1)
+Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.h /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft_types.h (CIN-69)
+Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored ()
+Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 25.12 seconds, memory usage 2164368kB, peak memory usage 2295440kB (SOL-9)

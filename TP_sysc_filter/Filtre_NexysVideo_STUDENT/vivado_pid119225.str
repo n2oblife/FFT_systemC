@@ -1,0 +1,135 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 119225
+License: Customer
+
+Current time: 	Tue Feb 07 16:02:47 CET 2023
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 5.15.0-58-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :0
+Screen size: 1680x1050
+Screen resolution (DPI): 95
+Available screens: 1
+Available disk space: 45 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	s21comte
+User home directory: /homes/s21comte
+User working directory: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT
+User country: 	FR
+User language: 	fr
+User locale: 	fr_FR
+
+RDI_BASEROOT: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado
+HDI_APPROOT: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+RDI_DATADIR: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/data
+RDI_BINDIR: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/bin
+
+Vivado preferences file location: /homes/s21comte/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /homes/s21comte/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /homes/s21comte/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.log
+Vivado journal file location: 	/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-119225-fl-tp-br-521
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 27007@licence-01.imta.fr
+XILINX_DSP: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+XILINX_SDK: /usr/home/enstb1/Xilinx/Vivado2018.2/SDK/2018.2
+XILINX_VIVADO: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+XILINX_VIVADO_HLS: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+
+
+GUI allocated memory:	151 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 885 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// [GUI Memory]: 25 MB (+23684kb) [00:00:07]
+// [Engine Memory]: 684 MB (+566258kb) [00:00:09]
+// WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking 1310ms to process. Increasing delay to 2000 ms.
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 75 MB (+51131kb) [00:00:28]
+// [Engine Memory]: 885 MB (+174318kb) [00:00:28]
+// HMemoryUtils.trashcanNow. Engine heap size: 890 MB. GUI used memory: 39 MB. Current time: 2/7/23 4:02:49 PM CET
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.xpr", 0); // q (O, ck)
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: IP_LOCK_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 927 MB. GUI used memory: 37 MB. Current time: 2/7/23 4:03:14 PM CET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 998 MB (+71904kb) [00:00:56]
+// Tcl Message: open_project /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/data/ip'. 
+// Project name: AudioProc; location: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj; part: xc7a200tsbg484-1
+// [Engine Memory]: 1,066 MB (+18859kb) [00:01:00]
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 6207.262 ; gain = 148.141 ; free physical = 8766 ; free virtual = 17101 
+// Elapsed time: 20 seconds
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, audioProc (audioProc.v)]", 1, true); // B (D, ck) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,136 MB. GUI used memory: 45 MB. Current time: 2/7/23 4:03:35 PM CET
+// [Engine Memory]: 1,136 MB (+17913kb) [00:01:17]
+// [GUI Memory]: 79 MB (+666kb) [00:01:53]
+// Elapsed time: 47 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (ck): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A (ck)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bx (ck):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Feb  7 16:04:27 2023] Launched synth_1... Run output will be captured here: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 8 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 268ms to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 89 MB (+5679kb) [00:03:17]
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 764ms to process. Increasing delay to 3000 ms.
+// ah (ck): Synthesis Completed: addNotify

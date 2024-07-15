@@ -1,0 +1,186 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Feb  7 16:06:47 2023
+# Process ID: 120887
+# Current directory: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT
+# Command line: vivado
+# Log file: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.log
+# Journal file: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.jou
+#-----------------------------------------------------------
+start_gui
+pwd
+/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+hs_err_pid119225.log
+proj
+src
+vivado_119225.backup.jou
+vivado_119225.backup.log
+vivado_120074.backup.jou
+vivado_120074.backup.log
+vivado_34368.backup.jou
+vivado_34368.backup.log
+vivado.jou
+vivado.log
+vivado_pid119225.str
+vivado_pid120887.str
+vivado_pid34368.str
+pwd
+/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT
+cd ./proj/
+source ./create_project.tcl
+# if {[info exists ::create_path]} {
+# 	set dest_dir $::create_path
+# } else {
+# 	set dest_dir [pwd]
+# }
+# puts "INFO: Creating new project in $dest_dir"
+INFO: Creating new project in /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj
+# set proj_name "AudioProc"
+# set origin_dir ".."
+# set orig_proj_dir "[file normalize "$origin_dir/proj"]"
+# set src_dir $origin_dir/src
+# set repo_dir $origin_dir/repo
+# set part_num "xc7a200tsbg484-1"
+# create_project $proj_name $dest_dir
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 6195.531 ; gain = 138.711 ; free physical = 8910 ; free virtual = 17238
+# set proj_dir [get_property directory [current_project]]
+# set obj [get_projects $proj_name]
+# set_property "default_lib" "xil_defaultlib" $obj
+# set_property "part" "$part_num" $obj
+# set_property "simulator_language" "Mixed" $obj
+# set_property "target_language" "VHDL" $obj
+# if {[string equal [get_filesets -quiet sources_1] ""]} {
+#   create_fileset -srcset sources_1
+# }
+# if {[string equal [get_filesets -quiet constrs_1] ""]} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets sources_1]
+# set_property "ip_repo_paths" "[file normalize $repo_dir]" $obj
+# add_files -quiet $src_dir/hdl
+# add_files -quiet [glob -nocomplain ../src/ip/*/*.xci]
+# add_files -fileset constrs_1 -quiet $src_dir/constraints
+# if {[string equal [get_runs -quiet synth_1] ""]} {
+#   create_run -name synth_1 -part $part_num -flow {Vivado Synthesis 2014} -strategy "Flow_PerfOptimized_High" -constrset constrs_1
+# } else {
+#   set_property strategy "Flow_PerfOptimized_High" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2014" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# set_property "part" "$part_num" $obj
+# set_property "steps.synth_design.args.fanout_limit" "400" $obj
+# set_property "steps.synth_design.args.fsm_extraction" "one_hot" $obj
+# set_property "steps.synth_design.args.keep_equivalent_registers" "1" $obj
+# set_property "steps.synth_design.args.resource_sharing" "off" $obj
+# set_property "steps.synth_design.args.no_lc" "1" $obj
+# set_property "steps.synth_design.args.shreg_min_size" "5" $obj
+# current_run -synthesis [get_runs synth_1]
+# if {[string equal [get_runs -quiet impl_1] ""]} {
+#   create_run -name impl_1 -part $part_num -flow {Vivado Implementation 2014} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+#   set_property flow "Vivado Implementation 2014" [get_runs impl_1]
+# }
+# set obj [get_runs impl_1]
+# set_property "part" "$part_num" $obj
+# set_property "steps.write_bitstream.args.bin_file" "1" $obj
+# current_run -implementation [get_runs impl_1]
+impl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property top tb_firUnit [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_firUnit' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_firUnit_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity top_level_FIR_FILTER
+INFO: [VRFC 10-307] analyzing entity top_level
+INFO: [VRFC 10-163] Analyzing VHDL file "/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/tb_firUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_firUnit
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 57e7e9100172462492847bfa9526c0db --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot tb_firUnit_behav xil_defaultlib.tb_firUnit -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling architecture v1 of entity xil_defaultlib.top_level_FIR_FILTER [top_level_fir_filter_default]
+Compiling architecture v1 of entity xil_defaultlib.top_level [top_level_default]
+Compiling architecture archi_tb_firunit of entity xil_defaultlib.tb_firunit
+Built simulation snapshot tb_firUnit_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.sim/sim_1/behav/xsim/xsim.dir/tb_firUnit_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Feb  7 16:09:36 2023...
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 6272.367 ; gain = 0.000 ; free physical = 8731 ; free virtual = 17167
+INFO: [USF-XSim-69] 'elaborate' step finished in '19' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_firUnit_behav -key {Behavioral:sim_1:Functional:tb_firUnit} -tclbatch {tb_firUnit.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb_firUnit.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_firUnit_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:34 . Memory (MB): peak = 6337.992 ; gain = 65.625 ; free physical = 8674 ; free virtual = 17132
+run 2 s
+run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 6349.992 ; gain = 5.000 ; free physical = 8681 ; free virtual = 17152
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci
+
+[Tue Feb  7 16:12:54 2023] Launched synth_1...
+Run output will be captured here: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/runme.log
+[Tue Feb  7 16:12:54 2023] Launched impl_1...
+Run output will be captured here: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/impl_1/runme.log

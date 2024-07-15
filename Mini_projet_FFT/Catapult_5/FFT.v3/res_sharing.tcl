@@ -1,0 +1,8 @@
+directive set /FFT/FFT:COMPORTEMENT/FFT:COMPORTEMENT:conc/but#8:acc#12 RESOURCE_NAME but#1:acc#13:rg
+directive set /FFT/FFT:COMPORTEMENT/FFT:COMPORTEMENT:conc/but#1:acc#13 RESOURCE_NAME but#1:acc#13:rg
+directive set /FFT/FFT:COMPORTEMENT/FFT:COMPORTEMENT:conc/but#8:acc#14 RESOURCE_NAME but#3:acc#13:rg
+directive set /FFT/FFT:COMPORTEMENT/FFT:COMPORTEMENT:conc/but#3:acc#13 RESOURCE_NAME but#3:acc#13:rg
+directive set /FFT/FFT:COMPORTEMENT/FFT:COMPORTEMENT:conc/but#8:acc RESOURCE_NAME but#1:acc#14:rg
+directive set /FFT/FFT:COMPORTEMENT/FFT:COMPORTEMENT:conc/but#1:acc#14 RESOURCE_NAME but#1:acc#14:rg
+directive set /FFT/FFT:COMPORTEMENT/FFT:COMPORTEMENT:conc/but#8:acc#13 RESOURCE_NAME but#3:acc#14:rg
+directive set /FFT/FFT:COMPORTEMENT/FFT:COMPORTEMENT:conc/but#3:acc#14 RESOURCE_NAME but#3:acc#14:rg

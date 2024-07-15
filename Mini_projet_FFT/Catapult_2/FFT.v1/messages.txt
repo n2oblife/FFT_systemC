@@ -1,0 +1,72 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+flow package require /SCVerify
+10.4
+solution file add [file join $sfd fft_types.h] -type C++ 
+/INPUTFILES/1
+solution file add [file join $sfd fft.cpp] -type C++ 
+/INPUTFILES/2
+solution file add [file join $sfd fft.h] -type C++ 
+/INPUTFILES/3
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Creating project directory '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_2/'. (PRJ-1)
+Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.h /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft_types.h (CIN-69)
+Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored ()
+Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 24.68 seconds, memory usage 2164368kB, peak memory usage 2295440kB (SOL-9)
+# Info: Project was written to disk. (PRJ-10)
+
+# Messages from "go compile"
+
+solution library add mgc_Xilinx-ARTIX-7-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family ARTIX-7 -speed -3 -part xc7a200tsbg484-3
+solution library add Xilinx_RAMS
+go libraries
+# Info: Starting transformation 'compile' on solution 'FFT.v1' (SOL-8)
+Generating synthesis internal form... (CIN-3)
+Found top design routine 'FFT' specified by directive (CIN-52)
+# Warning: Instantiating global variable 'processing' which may be accessed outside this scope (CIN-18)
+# Warning: Instantiating global variable 'weights' which may be accessed outside this scope (CIN-18)
+Inlining member function 'FFT::FFT' on object '' (CIN-64)
+Inlining member function 'FFT::COMPORTEMENT' on object '' (CIN-64)
+Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_real' (CIN-64)
+Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_img' (CIN-64)
+Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+Inlining routine 'fft' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining routine 'but' (CIN-14)
+Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# Warning: ignoring 'std::cout<<' statement and all side effects of parameters for synthesis, additional encounters also ignored (CIN-263)
+Optimizing block '/FFT' ... (CIN-4)
+# Info: Partition '/FFT/SC_CTOR' is found empty and is optimized away. (OPT-12)
+# Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_real'. (CIN-124)
+# Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_img'. (CIN-124)
+# Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Error: Expected at least one reset to be defined for process 'COMPORTEMENT' (CIN-194)
+# Error: Compilation aborted (CIN-5)

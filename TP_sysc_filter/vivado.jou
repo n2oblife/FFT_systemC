@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Feb  7 15:45:29 2023
+# Process ID: 34076
+# Current directory: /homes/s21comte/CHLS/TP_sysc_filter
+# Command line: vivado
+# Log file: /homes/s21comte/CHLS/TP_sysc_filter/vivado.log
+# Journal file: /homes/s21comte/CHLS/TP_sysc_filter/vivado.jou
+#-----------------------------------------------------------
+start_gui
+cd proj

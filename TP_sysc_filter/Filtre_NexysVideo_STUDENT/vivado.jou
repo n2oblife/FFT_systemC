@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Feb  7 16:06:47 2023
+# Process ID: 120887
+# Current directory: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT
+# Command line: vivado
+# Log file: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.log
+# Journal file: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.jou
+#-----------------------------------------------------------
+start_gui
+pwd
+ls
+pwd
+cd ./proj/
+source ./create_project.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_firUnit [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source tb_firUnit.tcl
+run 2 s
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1

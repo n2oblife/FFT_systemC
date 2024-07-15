@@ -1,0 +1,25 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+flow package require /SCVerify
+10.4
+solution file add [file join $sfd fft_types.h] -type C++ 
+/INPUTFILES/1
+solution file add [file join $sfd fft.cpp] -type C++ 
+/INPUTFILES/2
+solution file add [file join $sfd fft.h] -type C++ 
+/INPUTFILES/3
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Creating project directory '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_4/'. (PRJ-1)
+Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.h /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft_types.h (CIN-69)
+Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored ()
+# Error: class "sc_core::sc_in<d_type>" has no member "write" (CRD-135)
+# Error:           detected during compilation of secondary translation unit "/mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp" (CRD-135)
+# Error: class "sc_core::sc_in<d_type>" has no member "write" (CRD-135)
+# Error:           detected during compilation of secondary translation unit "/mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp" (CRD-135)
+# Error: Compilation aborted (CIN-5)

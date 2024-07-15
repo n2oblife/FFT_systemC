@@ -1,0 +1,1333 @@
+
+*** Running vivado
+    with args -log audioProc.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source audioProc.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source audioProc.tcl -notrace
+Command: synth_design -top audioProc -part xc7a200tsbg484-1 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci
+
+INFO: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (5.2)' for IP 'clk_wiz_0' (customized with software release 2015.3) has a newer major version in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 122163 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1323.660 ; gain = 86.773 ; free physical = 8322 ; free virtual = 16789
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'audioProc' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v:13]
+	Parameter tenhz bound to: 10000000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/.Xil/Vivado-122126-fl-tp-br-521/realtime/clk_wiz_0_stub.vhdl:18]
+WARNING: [Synth 8-350] instance 'clk_1' of module 'clk_wiz_0' requires 7 connections, but only 6 given [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v:85]
+INFO: [Synth 8-6157] synthesizing module 'audio_init' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v:24]
+	Parameter stRegAddr1 bound to: 4'b0000 
+	Parameter stRegAddr2 bound to: 4'b0001 
+	Parameter stData1 bound to: 4'b0010 
+	Parameter stData2 bound to: 4'b0011 
+	Parameter stError bound to: 4'b0100 
+	Parameter stDone bound to: 4'b0101 
+	Parameter stIdle bound to: 4'b0110 
+	Parameter stDelay bound to: 4'b0111 
+	Parameter stPLLsecond bound to: 4'b1111 
+	Parameter INIT_VECTORS bound to: 35 - type: integer 
+	Parameter IRD bound to: 1'b1 
+	Parameter IWR bound to: 1'b0 
+	Parameter delay bound to: 24000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v:51]
+INFO: [Synth 8-638] synthesizing module 'TWICtl' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:119]
+	Parameter CLOCKFREQ bound to: 50 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "gray" *) [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:133]
+INFO: [Synth 8-226] default block is never used [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:330]
+INFO: [Synth 8-226] default block is never used [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:363]
+INFO: [Synth 8-226] default block is never used [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:381]
+INFO: [Synth 8-226] default block is never used [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:399]
+INFO: [Synth 8-226] default block is never used [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:417]
+WARNING: [Synth 8-6014] Unused sequential element timeOutCnt_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:236]
+WARNING: [Synth 8-6014] Unused sequential element errTypeR_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:313]
+INFO: [Synth 8-256] done synthesizing module 'TWICtl' (1#1) [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd:119]
+INFO: [Synth 8-155] case statement is not full and has no default [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v:151]
+WARNING: [Synth 8-6014] Unused sequential element regData1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v:135]
+WARNING: [Synth 8-6014] Unused sequential element initFbWe_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v:150]
+INFO: [Synth 8-6155] done synthesizing module 'audio_init' (2#1) [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v:24]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/debounce.v:23]
+	Parameter dbTime bound to: 4000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (3#1) [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/debounce.v:23]
+INFO: [Synth 8-638] synthesizing module 'i2s_ctl' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/i2s_ctl.vhd:63]
+	Parameter C_DATA_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'i2s_ctl' (4#1) [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/i2s_ctl.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'fir' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/fir.vhd:28]
+	Parameter dwidth bound to: 24 - type: integer 
+	Parameter ntaps bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'top_level' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:451]
+INFO: [Synth 8-3491] module 'top_level_FIR_FILTER' declared at '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:20' bound to instance 'top_level_FIR_FILTER_inst' of component 'top_level_FIR_FILTER' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:500]
+INFO: [Synth 8-638] synthesizing module 'top_level_FIR_FILTER' [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'top_level_FIR_FILTER' (5#1) [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (6#1) [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:451]
+WARNING: [Synth 8-3848] Net dbg_output_0 in module/entity fir does not have driver. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/fir.vhd:18]
+WARNING: [Synth 8-3848] Net dbg_output_1 in module/entity fir does not have driver. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/fir.vhd:19]
+WARNING: [Synth 8-3848] Net dbg_output_2 in module/entity fir does not have driver. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/fir.vhd:20]
+WARNING: [Synth 8-3848] Net dbg_output_3 in module/entity fir does not have driver. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/fir.vhd:21]
+WARNING: [Synth 8-3848] Net dbg_output_4 in module/entity fir does not have driver. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/fir.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'fir' (7#1) [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/fir.vhd:28]
+WARNING: [Synth 8-350] instance 'leftFir' of module 'fir' requires 11 connections, but only 6 given [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v:195]
+WARNING: [Synth 8-350] instance 'rightFir' of module 'fir' requires 11 connections, but only 6 given [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v:204]
+WARNING: [Synth 8-6014] Unused sequential element sound_dataL_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v:225]
+WARNING: [Synth 8-6014] Unused sequential element sound_dataR_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v:226]
+INFO: [Synth 8-6155] done synthesizing module 'audioProc' (8#1) [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v:13]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[7]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[6]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[5]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[4]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[3]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[2]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[1]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[0]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[7]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[6]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[5]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[4]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[3]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[2]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[1]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[0]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_2
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_3
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_4
+WARNING: [Synth 8-3331] design i2s_ctl has unconnected port MM_I
+WARNING: [Synth 8-3331] design audioProc has unconnected port sw
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1370.285 ; gain = 133.398 ; free physical = 8332 ; free virtual = 16800
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1370.285 ; gain = 133.398 ; free physical = 8329 ; free virtual = 16797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1370.285 ; gain = 133.398 ; free physical = 8329 ; free virtual = 16797
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_1'
+Finished Parsing XDC File [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_1'
+Parsing XDC File [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc]
+Finished Parsing XDC File [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/audioProc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/audioProc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1790.301 ; gain = 0.000 ; free physical = 8031 ; free virtual = 16498
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1790.301 ; gain = 553.414 ; free physical = 8114 ; free virtual = 16582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tsbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1790.301 ; gain = 553.414 ; free physical = 8114 ; free virtual = 16582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 6).
+Applied set_property DONT_TOUCH = true for clk_1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1790.301 ; gain = 553.414 ; free physical = 8114 ; free virtual = 16582
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TWICtl'
+INFO: [Synth 8-5546] ROM "busState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "subState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "latchAddr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "subState" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "initWord" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "delaycnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "delayEn" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "delayEn" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "initA" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "initA" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "initA" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "data_i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "msg" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "initEn" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "initEn" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "initEn" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "cnt0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "DIV_RATE" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "LRCLK" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:237]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:227]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:229]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:231]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:233]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:239]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:241]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:235]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:254]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:244]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:246]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:248]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:250]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:255]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:258]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element MAC_7_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element MAC_8_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element MAC_5_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element MAC_6_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element MAC_3_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element MAC_4_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element MAC_1_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element MAC_2_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element MAC_15_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-6014] Unused sequential element MAC_16_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-6014] Unused sequential element MAC_13_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-6014] Unused sequential element MAC_14_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-6014] Unused sequential element MAC_11_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-6014] Unused sequential element MAC_12_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-6014] Unused sequential element MAC_9_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-6014] Unused sequential element MAC_10_mul_itm_1_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-6014] Unused sequential element taps_12_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:250]
+WARNING: [Synth 8-6014] Unused sequential element taps_14_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:246]
+WARNING: [Synth 8-6014] Unused sequential element taps_13_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:244]
+INFO: [Synth 8-5544] ROM "coeffs[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "coeffs[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "coeffs[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "coeffs[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "coeffs[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "coeffs[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "coeffs[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "coeffs[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pulse48kHz" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  stidle |                             0001 |                             0000
+                 ststart |                             0101 |                             0001
+                 stwrite |                             0000 |                             0011
+                  stsack |                             0011 |                             0110
+                  stread |                             0010 |                             0010
+            stmnackstart |                             0111 |                             1001
+                  stmack |                             0110 |                             0111
+             stmnackstop |                             0100 |                             1000
+                  ststop |                             1111 |                             0101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'gray' in module 'TWICtl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1790.301 ; gain = 553.414 ; free physical = 8101 ; free virtual = 16569
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     52 Bit       Adders := 2     
+	   8 Input     51 Bit       Adders := 4     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     30 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               51 Bit    Registers := 4     
+	               48 Bit    Registers := 34    
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	               31 Bit    Registers := 1     
+	               24 Bit    Registers := 80    
+	               22 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 3     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 38    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     24 Bit        Muxes := 16    
+	   4 Input     24 Bit        Muxes := 12    
+	   2 Input     22 Bit        Muxes := 6     
+	   4 Input     22 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 2     
+	   4 Input     18 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   8 Input      5 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	  21 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 9     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 53    
+	   4 Input      1 Bit        Muxes := 22    
+	   3 Input      1 Bit        Muxes := 5     
+	   9 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 4     
+	  11 Input      1 Bit        Muxes := 2     
+	  36 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module audioProc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module TWICtl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   9 Input      4 Bit        Muxes := 1     
+	  21 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 22    
+	   4 Input      1 Bit        Muxes := 21    
+	   3 Input      1 Bit        Muxes := 4     
+	   9 Input      1 Bit        Muxes := 1     
+Module audio_init 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 8     
+	  10 Input      1 Bit        Muxes := 4     
+	  11 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	  36 Input      1 Bit        Muxes := 1     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+Module i2s_ctl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               31 Bit    Registers := 1     
+	               24 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 2     
+	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module top_level_FIR_FILTER 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     52 Bit       Adders := 1     
+	   8 Input     51 Bit       Adders := 2     
+	   2 Input     30 Bit       Adders := 1     
++---Registers : 
+	               51 Bit    Registers := 2     
+	               48 Bit    Registers := 17    
+	               24 Bit    Registers := 39    
+	               22 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 2     
+Module fir 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 7     
+	   4 Input     24 Bit        Muxes := 6     
+	   2 Input     22 Bit        Muxes := 1     
+	   4 Input     22 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   4 Input     18 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "twi_controller/subState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "data_i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "initA" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "delayEn" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "delayEn" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "delaycnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "initEn" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "cnt0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "out" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_16_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_5_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_11_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_11_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_10_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_10_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_9_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_9_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_14_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_14_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_13_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_13_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_16_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_15_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_15_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_12_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_12_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_3_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_6_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_6_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_3_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_5_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_8_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_8_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_7_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_7_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_4_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_4_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_2_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_2_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_1_mul_itm_1_reg' and it is trimmed from '48' to '31' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MAC_1_mul_itm_1_reg' and it is trimmed from '48' to '17' bits. [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element taps_1_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:235]
+WARNING: [Synth 8-6014] Unused sequential element taps_1_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:235]
+WARNING: [Synth 8-6014] Unused sequential element taps_4_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element taps_4_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element taps_5_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element taps_5_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element taps_2_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:237]
+WARNING: [Synth 8-6014] Unused sequential element taps_3_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:231]
+WARNING: [Synth 8-6014] Unused sequential element taps_3_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:231]
+WARNING: [Synth 8-6014] Unused sequential element taps_0_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:241]
+WARNING: [Synth 8-6014] Unused sequential element taps_0_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:241]
+WARNING: [Synth 8-6014] Unused sequential element taps_0_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:241]
+WARNING: [Synth 8-6014] Unused sequential element taps_9_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element taps_9_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element taps_12_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:250]
+WARNING: [Synth 8-6014] Unused sequential element taps_10_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:254]
+WARNING: [Synth 8-6014] Unused sequential element taps_10_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:254]
+WARNING: [Synth 8-6014] Unused sequential element taps_11_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:248]
+WARNING: [Synth 8-6014] Unused sequential element taps_11_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:248]
+WARNING: [Synth 8-6014] Unused sequential element taps_6_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element taps_6_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element taps_7_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:255]
+WARNING: [Synth 8-6014] Unused sequential element taps_7_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:255]
+WARNING: [Synth 8-6014] Unused sequential element taps_8_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:258]
+WARNING: [Synth 8-6014] Unused sequential element taps_8_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:258]
+WARNING: [Synth 8-6014] Unused sequential element taps_2_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:237]
+WARNING: [Synth 8-6014] Unused sequential element taps_2_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:237]
+WARNING: [Synth 8-6014] Unused sequential element taps_5_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element taps_5_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element taps_6_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element taps_6_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element taps_3_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:231]
+WARNING: [Synth 8-6014] Unused sequential element taps_2_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:237]
+WARNING: [Synth 8-6014] Unused sequential element taps_4_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element taps_4_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element taps_1_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:235]
+WARNING: [Synth 8-6014] Unused sequential element taps_10_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:254]
+WARNING: [Synth 8-6014] Unused sequential element taps_10_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:254]
+WARNING: [Synth 8-6014] Unused sequential element taps_13_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:244]
+WARNING: [Synth 8-6014] Unused sequential element taps_13_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:244]
+WARNING: [Synth 8-6014] Unused sequential element taps_14_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:246]
+WARNING: [Synth 8-6014] Unused sequential element taps_13_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:244]
+WARNING: [Synth 8-6014] Unused sequential element taps_11_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:248]
+WARNING: [Synth 8-6014] Unused sequential element taps_11_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:248]
+WARNING: [Synth 8-6014] Unused sequential element taps_12_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:250]
+WARNING: [Synth 8-6014] Unused sequential element taps_12_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:250]
+WARNING: [Synth 8-6014] Unused sequential element taps_7_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:255]
+WARNING: [Synth 8-6014] Unused sequential element taps_7_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:255]
+WARNING: [Synth 8-6014] Unused sequential element taps_8_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:258]
+WARNING: [Synth 8-6014] Unused sequential element taps_8_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:258]
+WARNING: [Synth 8-6014] Unused sequential element taps_9_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element taps_9_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element taps_3_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:231]
+WARNING: [Synth 8-6014] Unused sequential element taps_14_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:246]
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_1_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_2_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_4_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_1_sva_reg is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: register taps_2_sva_reg is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: register MAC_4_mul_itm_1_reg is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_4_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_5_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_7_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_4_sva_reg is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: register taps_5_sva_reg is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: register MAC_7_mul_itm_1_reg is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_5_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_6_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_8_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_5_sva_reg is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: register taps_6_sva_reg is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: register MAC_8_mul_itm_1_reg is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_2_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_3_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_5_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_2_sva_reg is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: register taps_3_sva_reg is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: register MAC_5_mul_itm_1_reg is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_3_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_4_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_6_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_3_sva_reg is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: register taps_4_sva_reg is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: register MAC_6_mul_itm_1_reg is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A*B.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_1_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register MAC_1_mul_itm_1_reg is absorbed into DSP MAC_1_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_1_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_1_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A2*B.
+DSP Report: register taps_0_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_2_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register taps_0_sva_reg is absorbed into DSP MAC_2_mul_itm_1_reg.
+DSP Report: register MAC_2_mul_itm_1_reg is absorbed into DSP MAC_2_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_2_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_2_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_0_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_1_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_3_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_0_sva_reg is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: register taps_1_sva_reg is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: register MAC_3_mul_itm_1_reg is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_9_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_10_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_12_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_9_sva_reg is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: register taps_10_sva_reg is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: register MAC_12_mul_itm_1_reg is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_12_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_13_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_15_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_12_sva_reg is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: register taps_13_sva_reg is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: register MAC_15_mul_itm_1_reg is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: ACIN2*B.
+DSP Report: register taps_14_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_16_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_13_sva_reg is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: register taps_14_sva_reg is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: register MAC_16_mul_itm_1_reg is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_10_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_11_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_13_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_10_sva_reg is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: register taps_11_sva_reg is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: register MAC_13_mul_itm_1_reg is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_11_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_12_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_14_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_11_sva_reg is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: register taps_12_sva_reg is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: register MAC_14_mul_itm_1_reg is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_6_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_7_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_9_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_6_sva_reg is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: register taps_7_sva_reg is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: register MAC_9_mul_itm_1_reg is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_7_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_8_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_10_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_7_sva_reg is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: register taps_8_sva_reg is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: register MAC_10_mul_itm_1_reg is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_8_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_9_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_11_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_8_sva_reg is absorbed into DSP MAC_11_mul_itm_1_reg.
+DSP Report: register taps_9_sva_reg is absorbed into DSP MAC_11_mul_itm_1_reg.
+DSP Report: register MAC_11_mul_itm_1_reg is absorbed into DSP MAC_11_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_11_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_11_mul_itm_1_reg.
+WARNING: [Synth 8-6014] Unused sequential element taps_1_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:235]
+WARNING: [Synth 8-6014] Unused sequential element taps_2_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:237]
+WARNING: [Synth 8-6014] Unused sequential element taps_1_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:235]
+WARNING: [Synth 8-6014] Unused sequential element taps_2_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:237]
+WARNING: [Synth 8-6014] Unused sequential element taps_4_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element taps_5_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element taps_4_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element taps_5_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element taps_5_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element taps_6_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element taps_5_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element taps_6_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element taps_2_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:237]
+WARNING: [Synth 8-6014] Unused sequential element taps_3_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:231]
+WARNING: [Synth 8-6014] Unused sequential element taps_2_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:237]
+WARNING: [Synth 8-6014] Unused sequential element taps_3_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:231]
+WARNING: [Synth 8-6014] Unused sequential element taps_3_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:231]
+WARNING: [Synth 8-6014] Unused sequential element taps_4_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element taps_3_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:231]
+WARNING: [Synth 8-6014] Unused sequential element taps_4_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:233]
+WARNING: [Synth 8-6014] Unused sequential element taps_0_sva_reg was removed.  [/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/catapult_file.vhd:241]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_1_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_2_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_4_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_1_sva_reg is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: register taps_2_sva_reg is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: register MAC_4_mul_itm_1_reg is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_4_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_4_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_5_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_7_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_4_sva_reg is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: register taps_5_sva_reg is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: register MAC_7_mul_itm_1_reg is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_7_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_5_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_6_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_8_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_5_sva_reg is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: register taps_6_sva_reg is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: register MAC_8_mul_itm_1_reg is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_8_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_2_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_3_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_5_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_2_sva_reg is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: register taps_3_sva_reg is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: register MAC_5_mul_itm_1_reg is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_5_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_3_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_4_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_6_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_3_sva_reg is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: register taps_4_sva_reg is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: register MAC_6_mul_itm_1_reg is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_6_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A*B.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_1_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register MAC_1_mul_itm_1_reg is absorbed into DSP MAC_1_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_1_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_1_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A2*B.
+DSP Report: register taps_0_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_2_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register taps_0_sva_reg is absorbed into DSP MAC_2_mul_itm_1_reg.
+DSP Report: register MAC_2_mul_itm_1_reg is absorbed into DSP MAC_2_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_2_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_2_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_0_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_1_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_3_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_0_sva_reg is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: register taps_1_sva_reg is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: register MAC_3_mul_itm_1_reg is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_3_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_9_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_10_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_12_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_9_sva_reg is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: register taps_10_sva_reg is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: register MAC_12_mul_itm_1_reg is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_12_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_12_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_13_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_15_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_12_sva_reg is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: register taps_13_sva_reg is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: register MAC_15_mul_itm_1_reg is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_15_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: ACIN2*B.
+DSP Report: register taps_14_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_16_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_13_sva_reg is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: register taps_14_sva_reg is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: register MAC_16_mul_itm_1_reg is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_16_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_10_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_11_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_13_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_10_sva_reg is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: register taps_11_sva_reg is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: register MAC_13_mul_itm_1_reg is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_13_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_11_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_12_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_14_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_11_sva_reg is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: register taps_12_sva_reg is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: register MAC_14_mul_itm_1_reg is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_14_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_6_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_7_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_9_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_6_sva_reg is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: register taps_7_sva_reg is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: register MAC_9_mul_itm_1_reg is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_9_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_7_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_8_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_10_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_7_sva_reg is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: register taps_8_sva_reg is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: register MAC_10_mul_itm_1_reg is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_10_mul_itm_1_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A''*B.
+DSP Report: register taps_8_sva_reg is absorbed into DSP multOp.
+DSP Report: register taps_9_sva_reg is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP MAC_11_mul_itm_1_reg, operation Mode is: (PCIN>>17)+A''*B.
+DSP Report: register taps_8_sva_reg is absorbed into DSP MAC_11_mul_itm_1_reg.
+DSP Report: register taps_9_sva_reg is absorbed into DSP MAC_11_mul_itm_1_reg.
+DSP Report: register MAC_11_mul_itm_1_reg is absorbed into DSP MAC_11_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_11_mul_itm_1_reg.
+DSP Report: operator multOp is absorbed into DSP MAC_11_mul_itm_1_reg.
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[7]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[6]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[5]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[4]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[3]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[2]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[1]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_0[0]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[7]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[6]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[5]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[4]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[3]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[2]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[1]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_1[0]
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_2
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_3
+WARNING: [Synth 8-3331] design fir has unconnected port dbg_output_4
+WARNING: [Synth 8-3331] design i2s_ctl has unconnected port MM_I
+WARNING: [Synth 8-3331] design audioProc has unconnected port sw
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\Data_Out_int_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (initialize_audio/\twi_controller/currAddr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (initialize_audio/\twi_controller/currAddr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (initialize_audio/\twi_controller/currAddr_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (initialize_audio/\twi_controller/currAddr_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\twi_controller/currAddr_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\twi_controller/currAddr_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\twi_controller/currAddr_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (initialize_audio/\twi_controller/currAddr_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (initialize_audio/\initWord_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (audio_inout/\DIV_RATE_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\DIV_RATE_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\Data_Out_int_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\Data_Out_int_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\Data_Out_int_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\Data_Out_int_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\Data_Out_int_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (audio_inout/\Data_Out_int_reg[6] )
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[32]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[31]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[29]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[28]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[27]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[26]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[25]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[24]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[7]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (initWord_reg[1]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (twi_controller/currAddr_reg[7]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (twi_controller/currAddr_reg[6]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (twi_controller/currAddr_reg[5]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (twi_controller/currAddr_reg[4]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (twi_controller/currAddr_reg[3]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (twi_controller/currAddr_reg[2]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (twi_controller/currAddr_reg[1]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (twi_controller/currAddr_reg[0]) is unused and will be removed from module audio_init.
+WARNING: [Synth 8-3332] Sequential element (IV_reg[4]) is unused and will be removed from module debounce.
+WARNING: [Synth 8-3332] Sequential element (IV_reg[3]) is unused and will be removed from module debounce.
+WARNING: [Synth 8-3332] Sequential element (IV_reg[1]) is unused and will be removed from module debounce.
+WARNING: [Synth 8-3332] Sequential element (IV_reg[0]) is unused and will be removed from module debounce.
+WARNING: [Synth 8-3332] Sequential element (out_reg[4]) is unused and will be removed from module debounce.
+WARNING: [Synth 8-3332] Sequential element (out_reg[3]) is unused and will be removed from module debounce.
+WARNING: [Synth 8-3332] Sequential element (out_reg[1]) is unused and will be removed from module debounce.
+WARNING: [Synth 8-3332] Sequential element (out_reg[0]) is unused and will be removed from module debounce.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[30]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[29]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[28]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[27]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[26]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[25]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[24]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[23]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[22]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[21]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[20]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[19]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[18]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[17]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[16]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[15]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[14]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[13]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[12]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[11]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[10]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[9]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[8]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[7]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[6]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[5]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[4]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[3]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[2]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[1]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (DIV_RATE_reg[0]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (Data_Out_int_reg[6]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (Data_Out_int_reg[5]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (Data_Out_int_reg[4]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (Data_Out_int_reg[3]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (Data_Out_int_reg[2]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (Data_Out_int_reg[1]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (Data_Out_int_reg[0]) is unused and will be removed from module i2s_ctl.
+WARNING: [Synth 8-3332] Sequential element (firUnit_1/top_level_FIR_FILTER_inst/reg_while_else_land_lpi_1_dfm_cse_reg) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (firUnit_1/top_level_FIR_FILTER_inst/while_else_land_lpi_1_dfm_st_2_reg) is unused and will be removed from module fir.
+WARNING: [Synth 8-3332] Sequential element (firUnit_1/top_level_FIR_FILTER_inst/valid_out_reg) is unused and will be removed from module fir.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1790.301 ; gain = 553.414 ; free physical = 8068 ; free virtual = 16540
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++---------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name          | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A*B              | 24     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A*B   | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A2*B             | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A2*B  | 24     | 7      | -      | -      | 31     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | ACIN2*B          | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A*B              | 24     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A*B   | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A2*B             | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A2*B  | 24     | 7      | -      | -      | 31     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | ACIN2*B          | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top_level_FIR_FILTER | A''*B            | 24     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|top_level_FIR_FILTER | (PCIN>>17)+A''*B | 24     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 0    | 1    | 
++---------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_1/clk_out1' to pin 'clk_1/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_1/clk_out2' to pin 'clk_1/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_1/clk_out3' to pin 'clk_1/bbstub_clk_out3/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_1/clk_out4' to pin 'clk_1/bbstub_clk_out4/O'
+INFO: [Synth 8-5819] Moved 4 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:33 . Memory (MB): peak = 1790.301 ; gain = 553.414 ; free physical = 7901 ; free virtual = 16374
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1801.285 ; gain = 564.398 ; free physical = 7883 ; free virtual = 16356
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 1841.895 ; gain = 605.008 ; free physical = 7876 ; free virtual = 16348
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_1 has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 1841.895 ; gain = 605.008 ; free physical = 7875 ; free virtual = 16348
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 1841.895 ; gain = 605.008 ; free physical = 7875 ; free virtual = 16348
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 1841.895 ; gain = 605.008 ; free physical = 7875 ; free virtual = 16348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 1841.895 ; gain = 605.008 ; free physical = 7875 ; free virtual = 16348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 1841.895 ; gain = 605.008 ; free physical = 7875 ; free virtual = 16348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 1841.895 ; gain = 605.008 ; free physical = 7875 ; free virtual = 16348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|audioProc   | audio_inout/Data_In_int_reg[8] | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |clk_wiz_0_bbox_0 |     1|
+|2     |CARRY4           |   211|
+|3     |DSP48E1          |    26|
+|4     |DSP48E1_1        |    28|
+|5     |DSP48E1_4        |     4|
+|6     |DSP48E1_5        |     4|
+|7     |DSP48E1_6        |     2|
+|8     |LUT1             |    45|
+|9     |LUT2             |   147|
+|10    |LUT3             |   655|
+|11    |LUT4             |   492|
+|12    |LUT5             |   220|
+|13    |LUT6             |   314|
+|14    |SRL16E           |     1|
+|15    |FDRE             |  1716|
+|16    |FDSE             |    70|
+|17    |IBUF             |     8|
+|18    |IOBUF            |     2|
+|19    |OBUF             |     9|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+--------------------------------+-----------------------+------+
+|      |Instance                        |Module                 |Cells |
++------+--------------------------------+-----------------------+------+
+|1     |top                             |                       |  3959|
+|2     |  audio_inout                   |i2s_ctl                |   172|
+|3     |  dbuttons                      |debounce               |    26|
+|4     |  initialize_audio              |audio_init             |   314|
+|5     |    twi_controller              |TWICtl                 |   136|
+|6     |  leftFir                       |fir                    |  1704|
+|7     |    firUnit_1                   |top_level_1            |  1704|
+|8     |      top_level_FIR_FILTER_inst |top_level_FIR_FILTER_2 |  1701|
+|9     |  rightFir                      |fir_0                  |  1705|
+|10    |    firUnit_1                   |top_level              |  1705|
+|11    |      top_level_FIR_FILTER_inst |top_level_FIR_FILTER   |  1702|
++------+--------------------------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 1841.895 ; gain = 605.008 ; free physical = 7875 ; free virtual = 16348
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 250 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1841.895 ; gain = 184.992 ; free physical = 7942 ; free virtual = 16415
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 1841.902 ; gain = 605.008 ; free physical = 7955 ; free virtual = 16428
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 285 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+190 Infos, 251 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1873.910 ; gain = 648.703 ; free physical = 7977 ; free virtual = 16450
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/audioProc.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  7 16:13:50 2023...

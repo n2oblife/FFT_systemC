@@ -1,0 +1,6 @@
+RADIX hex
+CDEBUG 0
+DEBUGVARS {}
+WAVELIST {{DUT {} clk clk {}} {DUT {} rst rst {}} {DUT {} data_valid_source data_valid_source {}} {DUT {} data_req_sink data_req_sink {}} {DUT {} in_real in_real {}} {DUT {} in_img in_img {}} {DUT {} out_real out_real {}} {DUT {} out_img out_img {}} {DUT {} data_valid_sink data_valid_sink {}} {DUT {} data_req_source data_req_source {}}}
+DUTINST FFT
+STALL_CTRLS_ADDED 1

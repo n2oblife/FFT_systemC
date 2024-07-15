@@ -1,0 +1,698 @@
+//  Catapult Ultra Synthesis 2022.2_1/1019737 (Production Release) Mon Nov 21 20:05:27 PST 2022
+//  
+//          Copyright (c) Siemens EDA, 1996-2022, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux HLS_student@wifi-salsa-197.priv.enst-bretagne.fr 3.10.0-1160.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v25.2_1.0, HLS_PKGS v25.2_1.0, 
+//                       SIF_TOOLKITS v25.2_1.0, SIF_XILINX v25.2_1.0, 
+//                       SIF_ALTERA v25.2_1.0, CCS_LIBS v25.2_1.0, 
+//                       CDS_PPRO v2022.1, CDS_DesigChecker v2022.2, 
+//                       CDS_OASYS v21.1_2.5, CDS_PSR v22.1_0.5, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Tue Mar 14 15:41:42 2023
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log31409cc2c5501.0"
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# > set sfd [file dirname [info script]]
+# /mnt/campux/CHLS/Mini_projet_FFT/CABA
+# > options set Input/TargetPlatform x86_64
+# x86_64
+# > options set Input/SearchPath /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# > project new
+# > flow package require /SCVerify
+# 10.4
+# > solution file add [file join $sfd fft_types.h] -type C++ 
+# /INPUTFILES/1
+# > solution file add [file join $sfd fft.cpp] -type C++ 
+# /INPUTFILES/2
+# > solution file add [file join $sfd fft.h] -type C++ 
+# /INPUTFILES/3
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Creating project directory '/mnt/campux/CHLS/Mini_projet_FFT/Catapult/'. (PRJ-1)
+# Moving session transcript to file "/mnt/campux/CHLS/Mini_projet_FFT/catapult.log"
+# Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.h /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft_types.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 25.94 seconds, memory usage 2098920kB, peak memory usage 2098920kB (SOL-9)
+# Info: Project was written to disk. (PRJ-10)
+# > solution library add mgc_Xilinx-ARTIX-7-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family ARTIX-7 -speed -3 -part xc7a200tsbg484-3
+# > solution library add Xilinx_RAMS
+# > go libraries
+# Info: Starting transformation 'compile' on solution 'FFT.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/CABA/fft.h(21): Found top design routine 'FFT' specified by directive (CIN-52)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(15): Instantiating global variable 'processing' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(14): Instantiating global variable 'weights' which may be accessed outside this scope (CIN-18)
+# $PROJECT_HOME/CABA/fft.h(32): Inlining member function 'FFT::FFT' on object '' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(56): Inlining member function 'FFT::COMPORTEMENT' on object '' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(60): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(61): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(72): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(83): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(84): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_real' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(85): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_img' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(93): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(30): Inlining routine 'fft' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(98): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(99): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(100): ignoring 'std::cout<<' statement and all side effects of parameters for synthesis, additional encounters also ignored (CIN-263)
+# $PROJECT_HOME/CABA/fft.h(21): Optimizing block '/FFT' ... (CIN-4)
+# Info: $PROJECT_HOME/CABA/fft.h(32): Partition '/FFT/SC_CTOR' is found empty and is optimized away. (OPT-12)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_real'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_img'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Error: $PROJECT_HOME/CABA/fft.cpp(56): Expected at least one reset to be defined for process 'COMPORTEMENT' (CIN-194)
+# Error: Compilation aborted (CIN-5)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Completed transformation 'analyze' on solution 'FFT.v1': elapsed time 12.74 seconds, memory usage 2098920kB, peak memory usage 2229992kB (SOL-9)
+# Info: Design complexity at end of 'analyze': Total ops = 1333, Real ops = 531, Vars = 228 (SOL-21)
+# > end dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# Error: go compile: Failed compile
+# File '$PROJECT_HOME/CABA/fft.h' saved
+# File '$PROJECT_HOME/CABA/fft.h' saved
+# Input file has changed
+solution new -state new -solution FFT.v1 FFT
+# Info: Branching solution 'FFT.v2' at state 'new' (PRJ-2)
+# FFT.v2
+solution select FFT.v1
+# FFT.v1
+solution select FFT.v2
+# FFT.v2
+solution select FFT.v1
+# FFT.v1
+solution select FFT.v2
+# FFT.v2
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# > set sfd [file dirname [info script]]
+# /mnt/campux/CHLS/Mini_projet_FFT/CABA
+# > options set Input/TargetPlatform x86_64
+# x86_64
+# > options set Input/SearchPath /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# > project new
+# > flow package require /SCVerify
+# 10.4
+# > solution file add [file join $sfd fft_types.h] -type C++ 
+# /INPUTFILES/1
+# > solution file add [file join $sfd fft.cpp] -type C++ 
+# /INPUTFILES/2
+# > solution file add [file join $sfd fft.h] -type C++ 
+# /INPUTFILES/3
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Creating project directory '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_1/'. (PRJ-1)
+# Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.h /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft_types.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 25.30 seconds, memory usage 2164368kB, peak memory usage 2295440kB (SOL-9)
+# Info: Project was written to disk. (PRJ-10)
+# > solution library add mgc_Xilinx-ARTIX-7-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family ARTIX-7 -speed -3 -part xc7a200tsbg484-3
+# > solution library add Xilinx_RAMS
+# > go libraries
+# Info: Starting transformation 'compile' on solution 'FFT.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/CABA/fft.h(21): Found top design routine 'FFT' specified by directive (CIN-52)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(15): Instantiating global variable 'processing' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(14): Instantiating global variable 'weights' which may be accessed outside this scope (CIN-18)
+# $PROJECT_HOME/CABA/fft.h(33): Inlining member function 'FFT::FFT' on object '' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(56): Inlining member function 'FFT::COMPORTEMENT' on object '' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(60): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(61): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(72): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(83): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(84): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_real' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(85): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_img' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(93): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(30): Inlining routine 'fft' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(98): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(99): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(100): ignoring 'std::cout<<' statement and all side effects of parameters for synthesis, additional encounters also ignored (CIN-263)
+# $PROJECT_HOME/CABA/fft.h(21): Optimizing block '/FFT' ... (CIN-4)
+# Info: $PROJECT_HOME/CABA/fft.h(33): Partition '/FFT/SC_CTOR' is found empty and is optimized away. (OPT-12)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_real'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_img'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Error: $PROJECT_HOME/CABA/fft.cpp(56): Sensitivity list cannot contain both register and non-register control signals (CIN-119)
+# Error: Compilation aborted (CIN-5)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Completed transformation 'analyze' on solution 'FFT.v1': elapsed time 12.82 seconds, memory usage 2164368kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'analyze': Total ops = 1333, Real ops = 531, Vars = 229 (SOL-21)
+# > end dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# Error: go compile: Failed compile
+# File '$PROJECT_HOME/CABA/fft.h' saved
+# Input file has changed
+solution new -state new -solution FFT.v1 FFT
+# Info: Branching solution 'FFT.v2' at state 'new' (PRJ-2)
+# FFT.v2
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# > set sfd [file dirname [info script]]
+# /mnt/campux/CHLS/Mini_projet_FFT/CABA
+# > options set Input/TargetPlatform x86_64
+# x86_64
+# > options set Input/SearchPath /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# > project new
+# > flow package require /SCVerify
+# 10.4
+# > solution file add [file join $sfd fft_types.h] -type C++ 
+# /INPUTFILES/1
+# > solution file add [file join $sfd fft.cpp] -type C++ 
+# /INPUTFILES/2
+# > solution file add [file join $sfd fft.h] -type C++ 
+# /INPUTFILES/3
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Creating project directory '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_2/'. (PRJ-1)
+# Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.h /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft_types.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 24.68 seconds, memory usage 2164368kB, peak memory usage 2295440kB (SOL-9)
+# Info: Project was written to disk. (PRJ-10)
+# > solution library add mgc_Xilinx-ARTIX-7-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family ARTIX-7 -speed -3 -part xc7a200tsbg484-3
+# > solution library add Xilinx_RAMS
+# > go libraries
+# Info: Starting transformation 'compile' on solution 'FFT.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/CABA/fft.h(21): Found top design routine 'FFT' specified by directive (CIN-52)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(15): Instantiating global variable 'processing' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(14): Instantiating global variable 'weights' which may be accessed outside this scope (CIN-18)
+# $PROJECT_HOME/CABA/fft.h(33): Inlining member function 'FFT::FFT' on object '' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(56): Inlining member function 'FFT::COMPORTEMENT' on object '' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(60): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(61): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(72): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(83): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(84): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_real' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(85): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_img' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(93): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(30): Inlining routine 'fft' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(98): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(99): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(100): ignoring 'std::cout<<' statement and all side effects of parameters for synthesis, additional encounters also ignored (CIN-263)
+# $PROJECT_HOME/CABA/fft.h(21): Optimizing block '/FFT' ... (CIN-4)
+# Info: $PROJECT_HOME/CABA/fft.h(33): Partition '/FFT/SC_CTOR' is found empty and is optimized away. (OPT-12)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_real'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_img'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Error: $PROJECT_HOME/CABA/fft.cpp(56): Expected at least one reset to be defined for process 'COMPORTEMENT' (CIN-194)
+# Error: Compilation aborted (CIN-5)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Completed transformation 'analyze' on solution 'FFT.v1': elapsed time 12.66 seconds, memory usage 2164368kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'analyze': Total ops = 1333, Real ops = 531, Vars = 229 (SOL-21)
+# > end dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# Error: go compile: Failed compile
+# File '$PROJECT_HOME/CABA/fft.h' saved
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# > set sfd [file dirname [info script]]
+# /mnt/campux/CHLS/Mini_projet_FFT/CABA
+# > options set Input/TargetPlatform x86_64
+# x86_64
+# > options set Input/SearchPath /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# > project new
+# > flow package require /SCVerify
+# 10.4
+# > solution file add [file join $sfd fft_types.h] -type C++ 
+# /INPUTFILES/1
+# > solution file add [file join $sfd fft.cpp] -type C++ 
+# /INPUTFILES/2
+# > solution file add [file join $sfd fft.h] -type C++ 
+# /INPUTFILES/3
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Creating project directory '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_3/'. (PRJ-1)
+# Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.h /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft_types.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored
+# Error: $PROJECT_HOME/CABA/fft.cpp(63): class "sc_core::sc_in<d_type>" has no member "write" (CRD-135)
+# Error: $PROJECT_HOME/CABA/fft.cpp(63):           detected during compilation of secondary translation unit "/mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp" (CRD-135)
+# Error: $PROJECT_HOME/CABA/fft.cpp(64): class "sc_core::sc_in<d_type>" has no member "write" (CRD-135)
+# Error: $PROJECT_HOME/CABA/fft.cpp(64):           detected during compilation of secondary translation unit "/mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp" (CRD-135)
+# Error: Compilation aborted (CIN-5)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 12.77 seconds, memory usage 2295440kB, peak memory usage 2295440kB (SOL-9)
+# > end dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# Error: go analyze: Failed analyze
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# > set sfd [file dirname [info script]]
+# /mnt/campux/CHLS/Mini_projet_FFT/CABA
+# > options set Input/TargetPlatform x86_64
+# x86_64
+# > options set Input/SearchPath /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# > project new
+# > flow package require /SCVerify
+# 10.4
+# > solution file add [file join $sfd fft_types.h] -type C++ 
+# /INPUTFILES/1
+# > solution file add [file join $sfd fft.cpp] -type C++ 
+# /INPUTFILES/2
+# > solution file add [file join $sfd fft.h] -type C++ 
+# /INPUTFILES/3
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Creating project directory '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_4/'. (PRJ-1)
+# Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.h /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft_types.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored
+# Error: $PROJECT_HOME/CABA/fft.cpp(63): class "sc_core::sc_in<d_type>" has no member "write" (CRD-135)
+# Error: $PROJECT_HOME/CABA/fft.cpp(63):           detected during compilation of secondary translation unit "/mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp" (CRD-135)
+# Error: $PROJECT_HOME/CABA/fft.cpp(64): class "sc_core::sc_in<d_type>" has no member "write" (CRD-135)
+# Error: $PROJECT_HOME/CABA/fft.cpp(64):           detected during compilation of secondary translation unit "/mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp" (CRD-135)
+# Error: Compilation aborted (CIN-5)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 12.74 seconds, memory usage 2295440kB, peak memory usage 2295440kB (SOL-9)
+# > end dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# Error: go analyze: Failed analyze
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+# > set sfd [file dirname [info script]]
+# /mnt/campux/CHLS/Mini_projet_FFT/CABA
+# > options set Input/TargetPlatform x86_64
+# x86_64
+# > options set Input/SearchPath /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
+# > project new
+# > flow package require /SCVerify
+# 10.4
+# > solution file add [file join $sfd fft_types.h] -type C++ 
+# /INPUTFILES/1
+# > solution file add [file join $sfd fft.cpp] -type C++ 
+# /INPUTFILES/2
+# > solution file add [file join $sfd fft.h] -type C++ 
+# /INPUTFILES/3
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Creating project directory '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/'. (PRJ-1)
+# Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.h /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft.cpp /mnt/campux/CHLS/Mini_projet_FFT/CABA/fft_types.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 25.12 seconds, memory usage 2164368kB, peak memory usage 2295440kB (SOL-9)
+# Info: Project was written to disk. (PRJ-10)
+# > solution library add mgc_Xilinx-ARTIX-7-3_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family ARTIX-7 -speed -3 -part xc7a200tsbg484-3
+# > solution library add Xilinx_RAMS
+# > go libraries
+# Info: Starting transformation 'compile' on solution 'FFT.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/CABA/fft.h(21): Found top design routine 'FFT' specified by directive (CIN-52)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(15): Instantiating global variable 'processing' which may be accessed outside this scope (CIN-18)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(14): Instantiating global variable 'weights' which may be accessed outside this scope (CIN-18)
+# $PROJECT_HOME/CABA/fft.h(33): Inlining member function 'FFT::FFT' on object '' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(56): Inlining member function 'FFT::COMPORTEMENT' on object '' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(60): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(61): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(63): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_real' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(64): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_img' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(73): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(84): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(85): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_real' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(86): Inlining member function 'sc_core::sc_inout<d_type>::write' on object 'out_img' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(94): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(30): Inlining routine 'fft' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(18): Inlining routine 'but' (CIN-14)
+# $PROJECT_HOME/CABA/fft.cpp(99): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+# $PROJECT_HOME/CABA/fft.cpp(100): Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(101): ignoring 'std::cout<<' statement and all side effects of parameters for synthesis, additional encounters also ignored (CIN-263)
+# $PROJECT_HOME/CABA/fft.h(21): Optimizing block '/FFT' ... (CIN-4)
+# Info: $PROJECT_HOME/CABA/fft.h(33): Partition '/FFT/SC_CTOR' is found empty and is optimized away. (OPT-12)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_real'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_real'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_img'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_img'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_valid_sink'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Warning: $PROJECT_HOME/CABA/fft.cpp(56): SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'data_req_source'. (CIN-124)
+# Design 'FFT' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_msim.mk'
+# Warning: Toplevel found in header $PROJECT_HOME/CABA/fft.h, using $PROJECT_HOME/CABA/fft.cpp for header dependencies.
+# Info: CDesignChecker Shell script written to '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'FFT.v1': elapsed time 14.76 seconds, memory usage 2164368kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 1336, Real ops = 532, Vars = 229 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'libraries' on solution 'FFT.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/fpops.lib' [FPOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_connections.lib' [ccs_connections]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-ARTIX-7-3_beh.lib' [mgc_Xilinx-ARTIX-7-3_beh]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'FFT.v1': elapsed time 0.70 seconds, memory usage 2164368kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 1336, Real ops = 532, Vars = 229 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# > directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 }}
+# /CLOCKS {clk {-CLOCK_PERIOD 10.0 }}
+# > go assembly
+# Info: Starting transformation 'assembly' on solution 'FFT.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'FFT.v1': elapsed time 1.36 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 1336, Real ops = 532, Vars = 229 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# > go extract
+# Info: Starting transformation 'loops' on solution 'FFT.v1' (SOL-8)
+# $PROJECT_HOME/CABA/fft.cpp(66): Loop '/FFT/COMPORTEMENT/while' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'FFT.v1': elapsed time 0.76 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 1336, Real ops = 532, Vars = 229 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'memories' on solution 'FFT.v1' (SOL-8)
+# Info: Completed transformation 'memories' on solution 'FFT.v1': elapsed time 3.20 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 1338, Real ops = 566, Vars = 291 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'cluster' on solution 'FFT.v1' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'FFT.v1': elapsed time 0.12 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 1338, Real ops = 566, Vars = 291 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'architect' on solution 'FFT.v1' (SOL-8)
+# $PROJECT_HOME/CABA/fft.cpp(66): Deleting operations after LOOP "while" fft.cpp(66,4,5) without exit (OPT-1)
+# Design 'FFT' contains '661' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'FFT.v1': elapsed time 2.21 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 1766, Real ops = 661, Vars = 379 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'allocate' on solution 'FFT.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/FFT/COMPORTEMENT' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/CABA/fft.cpp(66): Prescheduled LOOP '/FFT/COMPORTEMENT/while' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/CABA/fft.cpp(56): Prescheduled LOOP '/FFT/COMPORTEMENT/COMPORTEMENT:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/CABA/fft.cpp(56): Prescheduled SEQUENTIAL '/FFT/COMPORTEMENT' (total length 3 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/CABA/fft.cpp(56): Initial schedule of SEQUENTIAL '/FFT/COMPORTEMENT': Latency = 3, Area (Datapath, Register, Total) = 8802.00, 0.00, 8802.00 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Input operation 'while:if:if#1:asn#18' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
+# Input operation 'while:if:if#1:asn#18' moved from c-step 1 to c-step 3 to save registers (SCHD-49)
+# Input operation 'while:if:if#1:asn#18' moved from c-step 1 to c-step 4 to save registers (SCHD-49)
+# Input operation 'while:if:if#1:asn#18' moved from c-step 1 to c-step 5 to save registers (SCHD-49)
+# Input operation 'while:if:if#1:asn#18' moved from c-step 1 to c-step 6 to save registers (SCHD-49)
+# Input operation 'while:if:if#1:asn#18' moved from c-step 1 to c-step 7 to save registers (SCHD-49)
+# Input operation 'while:if:if#1:asn#18' moved from c-step 1 to c-step 8 to save registers (SCHD-49)
+# Input operation 'while:if:if#2:asn' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
+# Input operation 'while:if:if#2:asn' moved from c-step 1 to c-step 3 to save registers (SCHD-49)
+# Input operation 'while:if:if#2:asn' moved from c-step 1 to c-step 4 to save registers (SCHD-49)
+# Input operation 'while:if:if#2:asn' moved from c-step 1 to c-step 5 to save registers (SCHD-49)
+# Input operation 'while:if:if#2:asn' moved from c-step 1 to c-step 6 to save registers (SCHD-49)
+# Input operation 'while:if:if#2:asn' moved from c-step 1 to c-step 7 to save registers (SCHD-49)
+# Input operation 'while:if:if#2:asn' moved from c-step 1 to c-step 8 to save registers (SCHD-49)
+# Info: $PROJECT_HOME/CABA/fft.cpp(56): Final schedule of SEQUENTIAL '/FFT/COMPORTEMENT': Latency = 1, Area (Datapath, Register, Total) = 5802.00, 0.00, 5802.00 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'FFT.v1': elapsed time 0.96 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 1766, Real ops = 661, Vars = 379 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'schedule' on solution 'FFT.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/FFT/COMPORTEMENT' (CRAAS-1)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'FFT.v1': elapsed time 6.58 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 1491, Real ops = 605, Vars = 386 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'dpfsm' on solution 'FFT.v1' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'FFT.v1': elapsed time 2.03 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 2202, Real ops = 1248, Vars = 491 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'instance' on solution 'FFT.v1' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'FFT.v1': elapsed time 2.21 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 1739, Real ops = 840, Vars = 1704 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'extract' on solution 'FFT.v1' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v1/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v1/concat_sim_rtl.vhdl
+# Generating SCVerify SystemC wrapper
+# Info: Wrote wave database file to /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v1/scverify/ccs_wave_signals.dat
+# Makefile for RTL VHDL written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat concat_sim_rtl VHDL written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v1/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v1/concat_sim_rtl.v
+# Makefile for RTL Verilog written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat concat_sim_rtl Verilog written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'FFT.v1': elapsed time 8.18 seconds, memory usage 2164036kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 1736, Real ops = 858, Vars = 420 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# > flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim sim
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim sim'
+# Make utility invoked from '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v1'
+#     /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include/mkfiles/ccs_questasim.mk:148: *** No QuestaSIM installation found. Check your QuestaSIM flow Path option in Catapult.  Stop.
+# > end dofile /mnt/campux/CHLS/Mini_projet_FFT/CABA/directives.tcl
+flow run /Vivado/synthesize -shell vivado_vhdl/rtl.vhdl.xv
+# Error: Environment variable XILINX_VIVADO is not defined
+# Error: Could not evaluate file path '$XILINX_VIVADO/bin/vivado': undefined variable 'XILINX_VIVADO'
+# Error: utility path hard: unable to convert path
+flow run /Vivado/synthesize -shell vivado_concat_vhdl/concat_rtl.vhdl.xv
+# Error: Environment variable XILINX_VIVADO is not defined
+# Error: Could not evaluate file path '$XILINX_VIVADO/bin/vivado': undefined variable 'XILINX_VIVADO'
+# Error: utility path hard: unable to convert path
+flow run /Vivado/synthesize -shell vivado_vhdl/rtl.vhdl.xv
+# Error: Environment variable XILINX_VIVADO is not defined
+# Error: Could not evaluate file path '$XILINX_VIVADO/bin/vivado': undefined variable 'XILINX_VIVADO'
+# Error: utility path hard: unable to convert path
+flow run /DesignAnalyzer/launch
+flow run /SCVerify/launch_make ./scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making './scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim'
+# Make utility invoked from '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v1'
+#     /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/orig_cxx_osci'
+# mkdir -p scverify/orig_cxx_osci
+# ============================================
+# Compiling C++ file: ../../CABA/fft.cpp
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/pkgs/dcs_gcc/usr/bin/g++ -DCCS_DUT_SYSC -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION -Wall -Wno-unknown-pragmas -Wno-unused-label -g -I. -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -I../.. -I. -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/pkgs/hls_pkgs/src -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/pkgs/siflibs -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  -c ../../CABA/fft.cpp -o scverify/orig_cxx_osci/fft.cpp.cxxts.o
+# ============================================
+# Linking executable
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/pkgs/dcs_gcc/usr/bin/g++  -static-libstdc++ -L/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/lib/Linux/gcc-10.3.0-64 -L/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/lib -L/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/lib/Linux/gcc-10.3.0-64 scverify/orig_cxx_osci/fft.cpp.cxxts.o -Wl,-Bstatic -lsystemc -Wl,-Bdynamic -lpthread -o scverify/orig_cxx_osci/scverify_top
+# /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/lib/Linux/gcc-10.3.0-64/libsystemc.a(sc_main_main.o) : Dans la fonction « sc_elab_and_sim » :
+# /wv/ace75/sc_vsi/rls_iwa/2022-06-07_130533/aol/build/systemc-2.3.3/objdir/src/sysc/../../../src/sysc/kernel/sc_main_main.cpp:89 : référence indéfinie vers « sc_main »
+# collect2: error: ld returned 1 exit status
+# make: *** [scverify/orig_cxx_osci/scverify_top] Error 1
+flow run /Vivado/synthesize -shell vivado_vhdl/rtl.vhdl.xv
+# Error: Environment variable XILINX_VIVADO is not defined
+# Error: Could not evaluate file path '$XILINX_VIVADO/bin/vivado': undefined variable 'XILINX_VIVADO'
+# Error: utility path hard: unable to convert path
+go switching
+# Info: Starting transformation 'prototyping' on solution 'FFT.v1' (SOL-8)
+# Info: Completed transformation 'prototyping' on solution 'FFT.v1': elapsed time 0.26 seconds, memory usage 2229984kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'prototyping': Total ops = 1736, Real ops = 858, Vars = 420 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'switching' on solution 'FFT.v1' (SOL-8)
+# Netlist written to file 'prepwr_FFT.vhdl' (NET-4)
+# Makefile for prepwr_FFT VHDL written to file './scverify/Verify_prepwr_FFT_vhdl_msim.mk'
+# Warning: Power analysis flow disabled for FPGA design/synthesis
+# Netlist written to file 'prepwr_FFT.v' (NET-4)
+# Makefile for prepwr_FFT Verilog written to file './scverify/Verify_prepwr_FFT_v_msim.mk'
+# Warning: Power analysis flow disabled for FPGA design/synthesis
+# Info: Completed transformation 'switching' on solution 'FFT.v1': elapsed time 2.55 seconds, memory usage 2229984kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'switching': Total ops = 1736, Real ops = 858, Vars = 420 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+flow run /PowerAnalysis/report_pre_pwropt_Verilog
+flow run /PowerAnalysis/report_pre_pwropt_VHDL
+flow run /DesignAnalyzer/launch
+go assembly
+directive set /FFT/COMPORTEMENT/while -PIPELINE_INIT_INTERVAL 1
+# Info: Branching solution 'FFT.v2' at state 'assembly' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_msim.mk'
+# Warning: Toplevel found in header $PROJECT_HOME/CABA/fft.h, using $PROJECT_HOME/CABA/fft.cpp for header dependencies.
+# Info: CDesignChecker Shell script written to '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v2/CDesignChecker/design_checker.sh'
+# /FFT/COMPORTEMENT/while/PIPELINE_INIT_INTERVAL 1
+flow run /DesignAnalyzer/launch
+flow run /DesignAnalyzer/launch
+solution select FFT.v1
+# FFT.v1
+go assembly
+directive set /FFT/COMPORTEMENT/while -PIPELINE_INIT_INTERVAL 1
+# Info: Branching solution 'FFT.v3' at state 'assembly' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_msim.mk'
+# Warning: Toplevel found in header $PROJECT_HOME/CABA/fft.h, using $PROJECT_HOME/CABA/fft.cpp for header dependencies.
+# Info: CDesignChecker Shell script written to '/mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v3/CDesignChecker/design_checker.sh'
+# /FFT/COMPORTEMENT/while/PIPELINE_INIT_INTERVAL 1
+go architect
+# Info: Starting transformation 'loops' on solution 'FFT.v3' (SOL-8)
+# $PROJECT_HOME/CABA/fft.cpp(66): Loop '/FFT/COMPORTEMENT/while' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'FFT.v3': elapsed time 0.69 seconds, memory usage 2229940kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 1336, Real ops = 532, Vars = 229 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'memories' on solution 'FFT.v3' (SOL-8)
+# Info: Completed transformation 'memories' on solution 'FFT.v3': elapsed time 3.07 seconds, memory usage 2229940kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 1338, Real ops = 566, Vars = 291 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'cluster' on solution 'FFT.v3' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'FFT.v3': elapsed time 0.09 seconds, memory usage 2229940kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 1338, Real ops = 566, Vars = 291 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'architect' on solution 'FFT.v3' (SOL-8)
+# $PROJECT_HOME/CABA/fft.cpp(66): Deleting operations after LOOP "while" fft.cpp(66,4,5) without exit (OPT-1)
+# Design 'FFT' contains '661' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'FFT.v3': elapsed time 1.87 seconds, memory usage 2229940kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 1766, Real ops = 661, Vars = 379 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+go allocate
+# Info: Starting transformation 'allocate' on solution 'FFT.v3' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/FFT/COMPORTEMENT' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/CABA/fft.cpp(66): Prescheduled LOOP '/FFT/COMPORTEMENT/while' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/CABA/fft.cpp(56): Prescheduled LOOP '/FFT/COMPORTEMENT/COMPORTEMENT:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/CABA/fft.cpp(56): Prescheduled SEQUENTIAL '/FFT/COMPORTEMENT' (total length 3 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/CABA/fft.cpp(56): Initial schedule of SEQUENTIAL '/FFT/COMPORTEMENT': Latency = 3, Area (Datapath, Register, Total) = 8802.00, 0.00, 8802.00 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Input operation 'while:if:if#1:asn#18' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
+# Info: $PROJECT_HOME/CABA/fft.cpp(56): Final schedule of SEQUENTIAL '/FFT/COMPORTEMENT': Latency = 2, Area (Datapath, Register, Total) = 8802.00, 0.00, 8802.00 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'FFT.v3': elapsed time 0.98 seconds, memory usage 2229940kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 1766, Real ops = 661, Vars = 379 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+go extract
+# Info: Starting transformation 'schedule' on solution 'FFT.v3' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/FFT/COMPORTEMENT' (CRAAS-1)
+# Info: $PROJECT_HOME/CABA/fft.cpp(66): Loop '/FFT/COMPORTEMENT/while' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'FFT.v3': elapsed time 6.63 seconds, memory usage 2229424kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 1656, Real ops = 659, Vars = 526 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'dpfsm' on solution 'FFT.v3' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'FFT.v3': elapsed time 2.17 seconds, memory usage 2229424kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 1779, Real ops = 1041, Vars = 443 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'instance' on solution 'FFT.v3' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'FFT.v3': elapsed time 2.07 seconds, memory usage 2229424kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 1589, Real ops = 841, Vars = 1583 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+# Info: Starting transformation 'extract' on solution 'FFT.v3' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v3/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v3/concat_sim_rtl.vhdl
+# Generating SCVerify SystemC wrapper
+# Info: Wrote wave database file to /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v3/scverify/ccs_wave_signals.dat
+# Makefile for RTL VHDL written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat concat_sim_rtl VHDL written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v3/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /mnt/campux/CHLS/Mini_projet_FFT/Catapult_5/FFT.v3/concat_sim_rtl.v
+# Makefile for RTL Verilog written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat concat_sim_rtl Verilog written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'FFT.v3': elapsed time 7.64 seconds, memory usage 2229424kB, peak memory usage 2295440kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 1581, Real ops = 845, Vars = 432 (SOL-21)
+# Info: Project was written to disk. (PRJ-10)
+flow run /DesignAnalyzer/launch

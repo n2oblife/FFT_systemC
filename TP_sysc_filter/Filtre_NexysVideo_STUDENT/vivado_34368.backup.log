@@ -1,0 +1,105 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Feb  7 15:46:31 2023
+# Process ID: 34368
+# Current directory: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT
+# Command line: vivado
+# Log file: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.log
+# Journal file: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.jou
+#-----------------------------------------------------------
+start_gui
+cd proj
+source create_project.tcl
+# if {[info exists ::create_path]} {
+# 	set dest_dir $::create_path
+# } else {
+# 	set dest_dir [pwd]
+# }
+# puts "INFO: Creating new project in $dest_dir"
+INFO: Creating new project in /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj
+# set proj_name "AudioProc"
+# set origin_dir ".."
+# set orig_proj_dir "[file normalize "$origin_dir/proj"]"
+# set src_dir $origin_dir/src
+# set repo_dir $origin_dir/repo
+# set part_num "xc7a200tsbg484-1"
+# create_project $proj_name $dest_dir
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 6205.574 ; gain = 152.328 ; free physical = 8971 ; free virtual = 17181
+# set proj_dir [get_property directory [current_project]]
+# set obj [get_projects $proj_name]
+# set_property "default_lib" "xil_defaultlib" $obj
+# set_property "part" "$part_num" $obj
+# set_property "simulator_language" "Mixed" $obj
+# set_property "target_language" "VHDL" $obj
+# if {[string equal [get_filesets -quiet sources_1] ""]} {
+#   create_fileset -srcset sources_1
+# }
+# if {[string equal [get_filesets -quiet constrs_1] ""]} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets sources_1]
+# set_property "ip_repo_paths" "[file normalize $repo_dir]" $obj
+# add_files -quiet $src_dir/hdl
+# add_files -quiet [glob -nocomplain ../src/ip/*/*.xci]
+# add_files -fileset constrs_1 -quiet $src_dir/constraints
+# if {[string equal [get_runs -quiet synth_1] ""]} {
+#   create_run -name synth_1 -part $part_num -flow {Vivado Synthesis 2014} -strategy "Flow_PerfOptimized_High" -constrset constrs_1
+# } else {
+#   set_property strategy "Flow_PerfOptimized_High" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2014" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# set_property "part" "$part_num" $obj
+# set_property "steps.synth_design.args.fanout_limit" "400" $obj
+# set_property "steps.synth_design.args.fsm_extraction" "one_hot" $obj
+# set_property "steps.synth_design.args.keep_equivalent_registers" "1" $obj
+# set_property "steps.synth_design.args.resource_sharing" "off" $obj
+# set_property "steps.synth_design.args.no_lc" "1" $obj
+# set_property "steps.synth_design.args.shreg_min_size" "5" $obj
+# current_run -synthesis [get_runs synth_1]
+# if {[string equal [get_runs -quiet impl_1] ""]} {
+#   create_run -name impl_1 -part $part_num -flow {Vivado Implementation 2014} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+#   set_property flow "Vivado Implementation 2014" [get_runs impl_1]
+# }
+# set obj [get_runs impl_1]
+# set_property "part" "$part_num" $obj
+# set_property "steps.write_bitstream.args.bin_file" "1" $obj
+# current_run -implementation [get_runs impl_1]
+impl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+report_ip_status -name ip_status
+launch_runs synth_1 -jobs 2
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci
+
+[Tue Feb  7 15:48:37 2023] Launched synth_1...
+Run output will be captured here: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+[Tue Feb  7 15:49:56 2023] Launched impl_1...
+Run output will be captured here: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP '/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+[Tue Feb  7 15:52:06 2023] Launched impl_1...
+Run output will be captured here: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/impl_1/runme.log

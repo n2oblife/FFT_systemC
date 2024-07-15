@@ -1,0 +1,234 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 34368
+License: Customer
+
+Current time: 	Tue Feb 07 15:46:51 CET 2023
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 5.15.0-58-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :0
+Screen size: 1680x1050
+Screen resolution (DPI): 95
+Available screens: 1
+Available disk space: 45 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	s21comte
+User home directory: /homes/s21comte
+User working directory: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT
+User country: 	FR
+User language: 	fr
+User locale: 	fr_FR
+
+RDI_BASEROOT: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado
+HDI_APPROOT: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+RDI_DATADIR: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/data
+RDI_BINDIR: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/bin
+
+Vivado preferences file location: /homes/s21comte/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /homes/s21comte/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /homes/s21comte/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.log
+Vivado journal file location: 	/homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-34368-fl-tp-br-521
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 27007@licence-01.imta.fr
+XILINX_DSP: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+XILINX_SDK: /usr/home/enstb1/Xilinx/Vivado2018.2/SDK/2018.2
+XILINX_VIVADO: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+XILINX_VIVADO_HLS: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+
+
+GUI allocated memory:	176 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 915 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 57 MB (+57336kb) [00:00:05]
+// [Engine Memory]: 915 MB (+807492kb) [00:00:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 921 MB. GUI used memory: 36 MB. Current time: 2/7/23 3:46:53 PM CET
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "cd proj", true); // aA (Z, ck)
+// Tcl Command: 'cd proj'
+// Tcl Command: 'cd proj'
+// Tcl Message: cd proj 
+// Tcl Command: 'rdi::info_commands {sour*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source create_project.tcl", true); // aA (Z, ck)
+// Tcl Command: 'source create_project.tcl'
+// Tcl Command: 'source create_project.tcl'
+// bx (ck):  Tcl Command Line : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: source create_project.tcl 
+// Tcl Message: # if {[info exists ::create_path]} { # 	set dest_dir $::create_path # } else { # 	set dest_dir [pwd] # } # puts "INFO: Creating new project in $dest_dir" 
+// Tcl Message: INFO: Creating new project in /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj 
+// Tcl Message: # set proj_name "AudioProc" # set origin_dir ".." # set orig_proj_dir "[file normalize "$origin_dir/proj"]" # set src_dir $origin_dir/src # set repo_dir $origin_dir/repo # set part_num "xc7a200tsbg484-1" # create_project $proj_name $dest_dir 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,066 MB (+110536kb) [00:00:23]
+// [GUI Memory]: 62 MB (+1968kb) [00:00:24]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PART_MODIFIED
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 6205.574 ; gain = 152.328 ; free physical = 8971 ; free virtual = 17181 
+// Tcl Message: # set proj_dir [get_property directory [current_project]] # set obj [get_projects $proj_name] # set_property "default_lib" "xil_defaultlib" $obj # set_property "part" "$part_num" $obj # set_property "simulator_language" "Mixed" $obj # set_property "target_language" "VHDL" $obj # if {[string equal [get_filesets -quiet sources_1] ""]} { #   create_fileset -srcset sources_1 # } # if {[string equal [get_filesets -quiet constrs_1] ""]} { #   create_fileset -constrset constrs_1 # } # set obj [get_filesets sources_1] # set_property "ip_repo_paths" "[file normalize $repo_dir]" $obj # add_files -quiet $src_dir/hdl # add_files -quiet [glob -nocomplain ../src/ip/*/*.xci] 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// Tcl Message: impl_1 
+dismissDialog("Tcl Command Line"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,093 MB. GUI used memory: 42 MB. Current time: 2/7/23 3:47:13 PM CET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 1,119 MB (+350kb) [00:00:31]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 65 MB (+76kb) [00:00:32]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 69 MB (+530kb) [00:00:36]
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 73 MB (+714kb) [00:01:16]
+// Elapsed time: 71 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, "Refresh IP Catalog"); // h (cM, ck)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -scan_changes 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status 
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (ck):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Feb  7 15:48:37 2023] Launched synth_1... Run output will be captured here: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/runme.log 
+// [GUI Memory]: 80 MB (+3495kb) [00:01:52]
+dismissDialog("Starting Design Runs"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,165 MB. GUI used memory: 41 MB. Current time: 2/7/23 3:48:38 PM CET
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 850ms to process. Increasing delay to 2000 ms.
+// ah (ck): Synthesis Completed: addNotify
+// Elapsed time: 78 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (ck):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: [Tue Feb  7 15:49:56 2023] Launched impl_1... Run output will be captured here: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/impl_1/runme.log 
+// [GUI Memory]: 86 MB (+2312kb) [00:03:11]
+dismissDialog("Starting Design Runs"); // bx (ck)
+// Elapsed time: 47 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // V (q, ck)
+// TclEventType: RUN_STEP_COMPLETED
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // V (q, ck)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // V (q, ck)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+// WARNING: HTimer (ExpRunMonitor Update Timer) is taking 714ms to process. Increasing delay to 3000 ms.
+// Elapsed time: 37 seconds
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // V (q, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Implementation Completed: addNotify
+// Elapsed time: 29 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ah (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Feb  7 15:52:06 2023] Launched impl_1... Run output will be captured here: /homes/s21comte/CHLS/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/impl_1/runme.log 
+// WARNING: HTimer (ExpRunMonitor Update Timer) is taking 566ms to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 701ms to process. Increasing delay to 4000 ms.
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
